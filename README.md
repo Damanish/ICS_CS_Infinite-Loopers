@@ -2,6 +2,21 @@
 # ATM Machine
 
 This simple C program is a console-based ATM machine application. It allows users to perform basic banking operations such as checking balance, depositing money, withdrawing money, changing PIN, and viewing the last three transactions.
+## Dependencies
+
+To run this program, ensure that you have the following dependencies installed on your system:
+
+1. **C Compiler:**
+   - You need a C compiler installed on your system. If you don't have one, you can use GCC (GNU Compiler Collection). For Windows users, MinGW-w64 or a similar tool can provide the GCC compiler.
+
+2. **Operating System:**
+   - This code is platform-independent and should work on various operating systems like Windows, Linux, and macOS.
+
+3. **Standard Input/Output:**
+   - The program uses standard input and output functions (`printf`, `scanf`). Ensure that you have access to a console or terminal for input and output.
+
+4. **File System Access:**
+   - The program reads and writes files to simulate an account system. Make sure you have permission to read and write files in the directory where the program is executed.
 
 ## Getting Started
 
