@@ -16,7 +16,7 @@ This simple C program is a console-based ATM machine application. It allows user
    ./ATM_machine
 Features
 1. Create a New Account
-If no existing account is found, the program prompts the user to create a new account by providing a username, PIN, and initial balance.
+If no existing account is found, the program prompts the user to create a new account by providing a username, PIN(make sure that pin is 4 digits), and initial balance.
 2. Login to Existing Account:
 Users can log in to their existing account by entering their username and PIN.
 3. Operations Menu:
