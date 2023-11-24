@@ -9,10 +9,10 @@ This simple C program is a console-based ATM machine application. It allows user
    ```bash
    git clone https://github.com/damanish/ICS_CS_Infinite-Loopers.git
 2. **Compile the Code:**
-   '''bash
+   
    gcc b23cs1057_b23me1040_b23cm1023_b23mt1009.c -o ATM_machine
 3. **Run the program:**
-   '''bash
+   
    ./ATM_machine
 Features
 1. Create a New Account
