@@ -17,19 +17,19 @@ This simple C program is a console-based ATM machine application. It allows user
 Features
 1. Create a New Account
 If no existing account is found, the program prompts the user to create a new account by providing a username, PIN, and initial balance.
-2. Login to Existing Account
+2. Login to Existing Account:
 Users can log in to their existing account by entering their username and PIN.
-3. Operations Menu
+3. Operations Menu:
 After successful login, users are presented with a menu to choose from various banking operations.
-4. Check Balance
+4. Check Balance:
 Users can check their account balance.
-5. Deposit Money
+5. Deposit Money:
 Users can deposit money into their account.
-6. Withdraw Money
+6. Withdraw Money:
 Users can withdraw money from their account, provided they have sufficient balance.
-7. Change PIN
+7. Change PIN:
 Users can change their PIN after successful verification.
-8. View Last Three Transactions
+8. View Last Three Transactions:
 Users can view the details of their last three transactions.
 9. Exit
 Users can exit the program.
