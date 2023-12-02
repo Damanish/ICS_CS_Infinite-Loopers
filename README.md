@@ -30,6 +30,8 @@ To run this program, ensure that you have the following dependencies installed o
 3. **Run the program:**
    
    ATM_machine.exe Features
+
+
 Features
 1. Create a New Account
 If no existing account is found, the program prompts the user to create a new account by providing a username, PIN(make sure that pin is 4 digits), and initial balance.
