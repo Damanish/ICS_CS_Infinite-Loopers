@@ -30,7 +30,9 @@ To run this program, ensure that you have the following dependencies installed o
    gcc b23cs1057_b23mt1009_b23cm1023_b23me1040.c -o ATM_machine
 4. **Run the program:**
    
-   ATM_machine.exe Features
+   ATM_machine.exe Features (for windows)
+   ./ATM_machine (for macOS)
+
 
 
 Features
