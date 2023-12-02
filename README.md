@@ -23,11 +23,12 @@ To run this program, ensure that you have the following dependencies installed o
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/damanish/ICS_CS_Infinite-Loopers.git
-   cd ICS_CS_Infinite-Loopers
-2. **Compile the Code:**
+2. Change directory by copying the file path to your copied directory
+   
+3. **Compile the Code:**
    
    gcc b23cs1057_b23mt1009_b23cm1023_b23me1040.c -o ATM_machine
-3. **Run the program:**
+4. **Run the program:**
    
    ATM_machine.exe Features
 
