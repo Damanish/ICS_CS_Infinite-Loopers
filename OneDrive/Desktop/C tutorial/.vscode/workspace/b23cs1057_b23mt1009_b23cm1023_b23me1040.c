@@ -38,12 +38,37 @@ main (void)
 	  char newusername[20];
 	  printf ("Enter your new username\n");
 	  scanf ("%s", newusername);
-	  FILE *fp;
+	  FILE* pf;
+	  if(fopen(newusername,"r")==NULL)
+	  {
+	      FILE *fp;
 	  fp = fopen (newusername, "w");
 	  int newpin;
-	  printf ("Enter new pin\n");
+	  printf ("Create pin(4 digits)\n");
 	  scanf ("%d", &newpin);
-	  fprintf (fp, "%d\n", newpin);
+	  if(newpin>=1000&&newpin<=9999)
+	  {
+	      fprintf (fp, "%d\n", newpin);
+	  }
+	  else 
+	  {
+	      printf("Entered pin not valid,\n");
+	      newpin=0;
+	      printf ("Create pin(4 digits)(last attempt left)\n");
+	      scanf ("%d", &newpin);
+	      if(newpin>=1000&&newpin<=9999)
+	      {
+	      fprintf (fp, "%d\n", newpin);
+	      }
+	      else 
+	      {
+	      printf("Entered pin not valid,\n");
+	      newpin=0;
+	      main();
+	      
+	      
+	      }
+	  }
 	  int newbalance;
 	  printf ("Deposit money\n");
 	  scanf ("%d", &newbalance);
@@ -53,6 +78,12 @@ main (void)
 	  printf ("Try logging in.\n");
 	  fclose (fp);
 	  main ();
+	}
+	else 
+	{
+	    printf("Username already taken,try a different one\n");
+	    main();
+	}
 	}
       else if (c == 'N')
 	{
