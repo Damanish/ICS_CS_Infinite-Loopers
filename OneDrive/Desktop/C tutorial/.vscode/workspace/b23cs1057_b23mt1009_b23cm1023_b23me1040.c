@@ -125,18 +125,22 @@ main (void)
 	case 2:
 	  deposit (fptr, username);
 	  fptr = fopen (username, "r+");
+	  fseek(fptr,4,SEEK_SET);
 	  break;
 	case 3:
 	  withdraw (fptr, username);
 	  fptr = fopen (username, "r+");
+	  fseek(fptr,4,SEEK_SET);
 	  break;
 	case 4:
 	  changepin (fptr, username, correctpin);
 	  fptr = fopen (username, "r+");
+	  fseek(fptr,4,SEEK_SET);
 	  break;
 	case 5:
 	  viewlast (fptr, username);
 	  fptr = fopen (username, "r+");
+	  fseek(fptr,4,SEEK_SET);
 	  break;
 	case 6:
 	  free (pin);
@@ -166,6 +170,7 @@ checkbalance (FILE * fptr)
 {
   int balance;
   fscanf (fptr, "%d", &balance);
+  printf("Your current balance is:");
   printf ("%d\n", balance);
 }
 
@@ -190,7 +195,7 @@ deposit (FILE * fptr, char username[])
     }
   else
     printf ("Enter valid Amount");
-  printf ("New balance: %d\n", copy.cbalance);
+  printf ("Current balance: %d\n", copy.cbalance);
   copy.transaction3 = copy.transaction2;
   copy.transaction2 = copy.transaction1;
   copy.transaction1 = +deposit1;
@@ -225,7 +230,7 @@ withdraw (FILE * fptr, char username[])
     }
   else
     printf ("Insufficient Balance\n");
-  printf ("New balance: %d\n", copy.cbalance);
+  printf ("Current balance: %d\n", copy.cbalance);
   if (done > 0)
     {
       copy.transaction3 = copy.transaction2;
@@ -257,7 +262,7 @@ changepin (FILE * fptr, char username[], int correctpin)
   scanf ("%d", &pin1);
   if (pin1 > 999 && pin1 < 10000 && pin1 != correctpin)
     {
-      copy.cpin += pin1;
+      copy.cpin = pin1;
       printf ("Pin changed successfully\n");
     }
   else if (pin1 == correctpin)
@@ -265,7 +270,7 @@ changepin (FILE * fptr, char username[], int correctpin)
       printf ("New pin can't be same as previous pin!!\n");
     }
   else
-    printf ("Enter valid pin\n");
+    printf ("Invalid pin\n");
 
   fptr = fopen (username, "w");
   fprintf (fptr, "%d\n%d\n%d\n%d\n%d", copy.cpin, copy.cbalance,
